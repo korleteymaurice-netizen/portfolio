@@ -1,0 +1,33 @@
+{
+  "name": "maurice-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"node server.js\" \"vite --config vite.config.js\"",
+    "build": "vite build --config vite.config.js",
+    "preview": "vite preview --host 0.0.0.0 --config vite.config.js",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "test": "node tests/smoke.mjs",
+    "hash-password": "node scripts/hash-password.js",
+    "generate-secret": "node scripts/generate-secret.js",
+    "verify": "node scripts/verify-deployment.js"
+  },
+  "dependencies": {
+    "bcryptjs": "latest",
+    "dotenv": "^16.4.5",
+    "express": "latest",
+    "framer-motion": "latest",
+    "multer": "^2.4.0",
+    "pg": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.0"
+  }
+}
